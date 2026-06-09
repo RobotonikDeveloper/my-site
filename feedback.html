@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Музей | СПК</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        section{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,10 +26,32 @@
         </nav>
         <br>
     </header>
-    <main>
+    <main style="align-items: center;">
         <section>
             <br>
             <h2 style="text-align: center; color: #294d91;">Форма обратной связи</h2>
+            <form action="#" method="post">
+                <div>
+                    <label style="color: #294d91;" for="name">Имя *</label>
+                    <input style="color: #294d91;" type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label style="color: #294d91;" for="email">Email *</label>
+                    <input style="color: #294d91;" type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label style="color: #294d91;" for="subject">Тема</label>
+                    <input style="color: #294d91;" type="text" id="subject" name="subject">
+                </div>
+                <div>
+                    <label style="color: #294d91;" for="message">Сообщение *</label>
+                    <textarea style="color: #294d91;" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div>
+                    <button style="color: #294d91;" type="submit">Отправить</button>
+                </div>
+            </form>
+            
         </section>
     </main>
 </body>
