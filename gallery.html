@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Музей | СПК</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .cards{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 70%;
+            height: auto;
+            align-self: center;
+        }
+        .card{
+            margin: 5px;
+            border-radius: 15px;
+            border-style: solid;
+            border-color: #294d91;
+            width: 30%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
         <br>
+        <img src="img/63d38814a8f69232256323.jpg" alt="" width="5%" height="aute" style="border-radius: 15px; border-style: solid;">
+        <br>
         <a style="text-decoration: none;" href="index.html"><h1>МУЗЕЙ</h1></a>
-        <h2>СПК</h2>
         <br>
         <nav>
             <a class="a-btn" href="expositions.html">Экспозиции</a>
@@ -21,9 +41,18 @@
         <br>
     </header>
     <main>
-        <section>
+        <section style="display: flex; flex-direction: column;">
             <br>
             <h2 style="text-align: center; color: #294d91;">Галерея</h2>
+            <br>
+            <div class="cards">
+                <img class="card" src="img/i (1).webp" alt="Ошибка загрузки">
+                <img class="card" src="img/i.webp" alt="Ошибка загрузки">
+                <img class="card" src="img/TfNZkTLlji4.jpg" alt="Ошибка загрузки">
+                <img class="card" src="img/i (1).webp" alt="Ошибка загрузки">
+                <img class="card" src="img/i.webp" alt="Ошибка загрузки">
+                <img class="card" src="img/TfNZkTLlji4.jpg" alt="Ошибка загрузки">
+            </div>
         </section>
     </main>
 </body>
