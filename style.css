@@ -35,7 +35,7 @@ nav{
 }
 
 .a-btn:hover{
-    background-color: #294d91;
+    background-color: #3f4f6d;
 }
 
 header{
@@ -43,5 +43,5 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #23427b;
+    background-color: #263042;
 }
