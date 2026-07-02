@@ -1,9 +1,9 @@
 const images = [
-    'https://picsum.photos/id/10/600/400',
-    'https://picsum.photos/id/20/600/400',
-    'https://picsum.photos/id/30/600/400',
-    'https://picsum.photos/id/40/600/400',
-    'https://picsum.photos/id/50/600/400'
+    'img/1csfj3odrbgsb7mx1hyn6wb1x1q13d0n.jpg',
+    'img/63d38814a8f69232256323.jpg',
+    'img/TfNZkTLlji4.jpg',
+    'img/i.webp',
+    'img/i (1).webp'
 ];
 
 // Находим элементы на странице
