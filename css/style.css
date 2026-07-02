@@ -52,26 +52,3 @@ footer{
 .logo{
     filter: drop-shadow(1px 1px 0 rgb(255, 255, 255))
 }
-
-/* Сетка преимуществ на Flexbox */
-.features-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.feature-card {
-    flex: 1;
-    min-width: 200px;
-    max-width: 280px;
-    background-color: #f0f4f8;
-    padding: 25px 20px;
-    border-radius: 12px;
-    text-align: center;
-    transition: box-shadow 0.2s;
-}
-
-.feature-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
