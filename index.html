@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <style>
         /* Сетка преимуществ на Flexbox */
@@ -64,9 +65,21 @@
                 <p>Посвящена специальной военной операции</p>
             </div>
         </div>
+        <br>
+        <div class="slider-container">
+                <div class="slider">
+                    <button class="slider-btn prev-btn" id="prevBtn">❮</button>
+                    <div class="slider-image-wrapper">
+                        <img src="" alt="Изображение 1" id="sliderImage">
+                    </div>
+                    <button class="slider-btn next-btn" id="nextBtn">❯</button>
+                </div>
+                <p class="image-counter" id="imageCounter">1 / 5</p>
+        </div>
     </main>
     <footer>
         <p>&copy; Музей СПК</p>
     </footer>
 </body>
+<script src="js/slider.js"></script>
 </html>
