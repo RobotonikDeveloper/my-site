@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Музей | СПК</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <br>
-        <a href="index.html" style="text-align: center;"><img src="img/logo.png" style="filter: drop-shadow(1px 1px 0 rgb(255, 255, 255))" alt="" width="25%" height="auto"></a>
+        <a href="index.html"><img src="img/logo.png" alt="Лого" class="logo" width="15%" height="auto"></a>
         <nav>
-            <a class="a-btn" href="expositions.html">Экспозиции</a>
-            <a class="a-btn" href="gallery.html">Галерея</a>
-            <a class="a-btn" href="about.html">О нас</a>
-            <a class="a-btn" href="feedback.html">Обратная связь</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="expositions.html">Экспозиции</a>
+            <a href="about.html">О нас</a>
+            <a href="feedback.html">Обратная связь</a>
         </nav>
-        <br>
     </header>
     <main>
-        <section style="display: flex; flex-direction: column;">
-            <br>
-            <h2 style="text-align: center; color: #3f4f6d;">Главная</h2>
-            <br>
-            <p style="color: #3f4f6d; width: 60%; align-self: center; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolore aliquip commodo anim aliquip ipsum deserunt fugiat consequat est ullamco reprehenderit. Eiusmod cillum officia ex ea deserunt aliqua velit deserunt. Amet excepteur occaecat elit ad anim ut irure commodo aute magna et fugiat sint aute.
-
-                Sunt incididunt irure ipsum id amet nostrud commodo sed minim do culpa anim eiusmod. Ad proident lorem laboris labore sit reprehenderit veniam consectetur. Ad aliqua ad lorem voluptate amet laborum velit minim irure culpa. Reprehenderit cupidatat nostrud ullamco nisi ullamco elit amet dolore sint ut. Nisi velit reprehenderit elit commodo consectetur sunt esse incididunt dolor ea ea laboris dolore exercitation.
-                
-                Ut incididunt cupidatat velit quis elit aliqua sit incididunt anim ipsum elit ea. Sit minim dolor fugiat aute est minim laboris. Deserunt esse amet adipiscing tempor qui fugiat adipiscing occaecat esse. Aute sunt tempor voluptate deserunt id deserunt incididunt mollit id dolore excepteur officia minim.</p>
-        </section>
+        <br>
+        <h1 style="text-align: center; color: #3f4f6d;">Главная</h1>
+        <br>
+        <p style="text-align: center;">Посетите выставки нашего музея:</p>
+        <br>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Истории связующая нить...</h3>
+                <br>
+                <p>Рассказывает историю нашего колледжа</p>
+            </div>
+            <div class="feature-card">
+                <h3>Старая Русса</h3>
+                <br>
+                <p>Рассказывает о боях происходивших на территории Старой Руссы</p>
+            </div>
+            <div class="feature-card">
+                <h3>Специальная военная операция</h3>
+                <br>
+                <p>Посвящена специальной военной операции</p>
+            </div>
+        </div>
     </main>
+    <footer>
+        <p>&copy; Музей СПК</p>
+    </footer>
 </body>
 </html>

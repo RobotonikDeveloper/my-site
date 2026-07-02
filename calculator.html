@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор скидки</title>
+    <link rel="stylesheet" href="css/discount.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Калькулятор скидки</h2>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="originalPrice">Цена (₽)</label>
+                <input type="number" id="originalPrice" placeholder="1000" min="0">
+            </div>
+            <div class="input-group">
+                <label for="discountPercent">Скидка (%)</label>
+                <input type="number" id="discountPercent" placeholder="10" min="0" max="100">
+            </div>
+            <button id="calculateBtn">Рассчитать</button>
+            <div class="result" id="result">
+                <p>Итоговая цена: <span id="finalPrice">0</span> ₽</p>
+                <p>Сумма скидки: <span id="discountAmount">0</span> ₽</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/discount.js"></script>
+</body>
+</html>

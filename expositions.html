@@ -1,47 +1,180 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Музей | СПК</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        .cards{
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Контейнер карточки */
+        .flip-card {
+            background-color: transparent;
+            height: 380px;
+            perspective: 1000px;  /* Создаёт 3D-эффект */
+            cursor: pointer;
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Внутренний блок, который вращается */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        /* Переворот при наведении (CSS-версия) */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Если используется класс flipped (для клика) */
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Передняя и задняя стороны карточки */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;  /* Скрываем обратную сторону */
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            width: 60%;
-            align-self: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
         }
-        .card{
-            border-radius: 15px;
-            border-style: solid;
-            border-color: #3f4f6d;
+
+        .flip-card-front {
+            background: white;
         }
+
+        .flip-card-back {
+            background: #2c3e50;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-icon {
+            font-size: 64px;
+            margin-bottom: 15px;
+        }
+
+        .flip-card-front h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .flip-card-front p {
+            color: #888;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .flip-card-back h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .flip-card-back p {
+            font-size: 15px;
+            color: #bdc3c7;
+            margin: 5px 0;
+        }
+
+        .flip-card-btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+
+        .flip-card-btn:hover {
+            background: #2980b9;
+        }
+
     </style>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <br>
-        <a href="index.html" style="text-align: center;"><img src="img/logo.png" style="filter: drop-shadow(1px 1px 0 rgb(255, 255, 255))" alt="" width="25%" height="auto"></a>
+        <a href="index.html"><img src="img/logo.png" alt="Лого" class="logo" width="15%" height="auto"></a>
         <nav>
-            <a class="a-btn" href="expositions.html">Экспозиции</a>
-            <a class="a-btn" href="gallery.html">Галерея</a>
-            <a class="a-btn" href="about.html">О нас</a>
-            <a class="a-btn" href="feedback.html">Обратная связь</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="expositions.html">Экспозиции</a>
+            <a href="about.html">О нас</a>
+            <a href="feedback.html">Обратная связь</a>
         </nav>
-        <br>
     </header>
     <main>
-        <section style="display: flex; flex-direction: column;">
-            <br>
-            <h2 style="text-align: center; color: #3f4f6d;">Экспозиции</h2>
-            <br>
-            <div class="cards">
-
+        <br>
+        <h1 style="text-align: center; color: #3f4f6d;">Экспозиции</h1>
+        <br>
+        <div class="card-grid">
+            <!-- Карточка 1 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="flip-card-icon">🚩</div>
+                        <h3>Старая Русса</h3>
+                        <p>Нажмите или наведите</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Старая Русса</h3>
+                        <p>В январе 1943 года Ставка Верховного Главнокомандования СССР разработала план наступательной операции под кодовым наименованием «Полярная звезда». На первом этапе операции войска Северо-Западного фронта должны были окружить и уничтожить группировку в демянском выступе немецкой 16-й армии (командующий генерал-фельдмаршал Эрнст Буш) группы армий «Север» (командующий генерал-фельдмаршал Георг фон Кюхлер). На втором этапе Северо-Западный фронт должен был без оперативной паузы силами Особой группы войск генерала М. С. Хозина глубоким ударом на старорусском направлении в общем направлении на Псков прорвать ослабленную оборону вражеских войск и выйти в глубокий тыл основным силам немецких войск под Ленинградом и Новгородом. Общее руководство ходом операции осуществлял представитель Ставки Верховного Главнокомандования Маршал Советского Союза Г. К. Жуков.</p>
+                        <a href="#" class="flip-card-btn">Подробнее</a>
+                    </div>
+                </div>
             </div>
-        </section>
+    
+            <!-- Карточка 2 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="flip-card-icon">📖</div>
+                        <h3>Истории связующая нить...</h3>
+                        <p>Нажмите или наведите</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Истории связующая нить...</h3>
+                        <p>По заказу Сибирского химического комбината (СХК) создали Томский вечерний политехникум. Первые 50 студентов начали обучение по двум специальностям. Занятия проходили в помещениях школ (№ 76, 77, 85) и ГПТУ-10. Главная задача — готовить квалифицированных рабочих для растущего промышленного комплекса.                         </p>
+                        <a href="#" class="flip-card-btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>    
     </main>
+    <footer>
+        <p>&copy; Музей СПК</p>
+    </footer>
 </body>
 </html>

@@ -1,57 +1,78 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Музей | СПК</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <style>
-        .cards{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            width: 70%;
-            height: auto;
-            align-self: center;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 200px;
+            gap: 15px;
         }
-        .card{
-            margin: 5px;
-            border-radius: 15px;
-            border-style: solid;
-            border-color: #3f4f6d;
-            width: 30%;
-            height: auto;
+
+        .gallery-item {
+            background-color: #3498db;
+            background-size: cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Растягиваем некоторые элементы на несколько колонок/строк */
+        .gallery-item-1 {
+            grid-column: span 2;
+            grid-row: span 2;
+            background-color: #e74c3c;
+        }
+
+        .gallery-item-3 {
+            grid-column: span 2;
+            background-color: #2ecc71;
+        }
+
+        .gallery-item-5 {
+            grid-row: span 2;
+            background-color: #f39c12;
         }
     </style>
 </head>
 <body>
     <header>
-        <br>
-        <a href="index.html" style="text-align: center;"><img src="img/logo.png" style="filter: drop-shadow(1px 1px 0 rgb(255, 255, 255))" alt="" width="25%" height="auto"></a>
+        <a href="index.html"><img src="img/logo.png" alt="Лого" class="logo" width="15%" height="auto"></a>
         <nav>
-            <a class="a-btn" href="expositions.html">Экспозиции</a>
-            <a class="a-btn" href="gallery.html">Галерея</a>
-            <a class="a-btn" href="about.html">О нас</a>
-            <a class="a-btn" href="feedback.html">Обратная связь</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="expositions.html">Экспозиции</a>
+            <a href="about.html">О нас</a>
+            <a href="feedback.html">Обратная связь</a>
         </nav>
-        <br>
     </header>
     <main>
-        <section style="display: flex; flex-direction: column;">
-            <br>
-            <h2 style="text-align: center; color: #3f4f6d;">Галерея</h2>
-            <br>
-            <div class="cards">
-                <img class="card" src="img/i (1).webp" alt="Ошибка загрузки">
-                <img class="card" src="img/i.webp" alt="Ошибка загрузки">
-                <img class="card" src="img/TfNZkTLlji4.jpg" alt="Ошибка загрузки">
-                <img class="card" src="img/i (1).webp" alt="Ошибка загрузки">
-                <img class="card" src="img/i.webp" alt="Ошибка загрузки">
-                <img class="card" src="img/TfNZkTLlji4.jpg" alt="Ошибка загрузки">
+        <br>
+        <h1 style="text-align: center; color: #3f4f6d;">Галерея</h1>
+        <br>
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div style="background-image: url('img/1csfj3odrbgsb7mx1hyn6wb1x1q13d0n.jpg');" class="gallery-item gallery-item-1"></div>
+                    <div style="background-image: url('img/TfNZkTLlji4.jpg');" class="gallery-item gallery-item-2"></div>
+                    <div style="background-image: url('img/i.webp');" class="gallery-item gallery-item-3"></div>
+                    <div style="background-image: url('img/TfNZkTLlji4.jpg');" class="gallery-item gallery-item-4"></div>
+                    <div style="background-image: url('img/i.webp');" class="gallery-item gallery-item-5"></div>
+                    <div style="background-image: url('img/i\ \(1\).webp');" class="gallery-item gallery-item-6"></div>
+                </div>
             </div>
-        </section>
+        </section>        
     </main>
+    <footer>
+        <p>&copy; Музей СПК</p>
+    </footer>
 </body>
 </html>

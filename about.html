@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Музей | СПК</title>
-    <link rel="stylesheet" href="style.css">
+    <title>О нас</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <style>
+        .socials{
+            display: grid;
+            grid-template-columns: 60px 1fr 1fr;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <br>
-        <a href="index.html" style="text-align: center;"><img src="img/logo.png" style="filter: drop-shadow(1px 1px 0 rgb(255, 255, 255))" alt="" width="25%" height="auto"></a>
+        <a href="index.html"><img src="img/logo.png" alt="Лого" class="logo" width="15%" height="auto"></a>
         <nav>
-            <a class="a-btn" href="expositions.html">Экспозиции</a>
-            <a class="a-btn" href="gallery.html">Галерея</a>
-            <a class="a-btn" href="about.html">О нас</a>
-            <a class="a-btn" href="feedback.html">Обратная связь</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="expositions.html">Экспозиции</a>
+            <a href="about.html">О нас</a>
+            <a href="feedback.html">Обратная связь</a>
         </nav>
-        <br>
     </header>
-    <main style="align-items: center;">
+    <main style="display: flex; flex-direction: column; align-items: center;">
         <section>
             <br>
-            <h2 style="text-align: center; color: #3f4f6d;">О нас</h2>
+            <h1 style="text-align: center; color: #3f4f6d;">О нас</h1>
+            <br>
             <div class="contacts-info">
                 <div>
                     <h3 style="color: #3f4f6d;">Адрес</h3>
@@ -40,11 +45,18 @@
                     <h3 style="color: #3f4f6d;">Режим работы</h3>
                     <p style="color: #3f4f6d;">Ежедневно с 10:00 до 21:00</p>
                 </div>
+                <div class="socials">
+                    <a href=""><img src="img/tg.png" alt="" width="54px" height="54px"></a>
+                    <a href=""><img src="img/vk.png" alt="" width="54px" height="54px"></a>
+                </div>
             </div>
             <!-- Карта: iframe -->
             <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/11351/seversk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Северск</a><a href="https://yandex.ru/maps/11351/seversk/house/ulitsa_stroiteley_25/bE0Yfg9oTkQOQFtsfXpxc3RrbA==/?ll=84.889335%2C56.603174&utm_medium=mapframe&utm_source=maps&z=18.05" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Строителей, 25 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=84.889335%2C56.603174&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTA3NDA3MDEzEmDQoNC-0YHRgdC40Y8sINCi0L7QvNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQodC10LLQtdGA0YHQuiwg0YPQu9C40YbQsCDQodGC0YDQvtC40YLQtdC70LXQuSwgMjUiCg0Gx6lCFVxpYkI%2C&z=18.05" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
             
         </section>
     </main>
+    <footer>
+        <p>&copy; Музей СПК</p>
+    </footer>
 </body>
 </html>
