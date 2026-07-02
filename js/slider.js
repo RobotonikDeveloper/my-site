@@ -6,11 +6,20 @@ const images = [
     'img/i (1).webp'
 ];
 
+const messages = [
+    'Руководитель музея',
+    'Логотип СПК',
+    'Гости музея',
+    'Выставка',
+    'Гости музея'
+]
+
 // Находим элементы на странице
 const sliderImage = document.getElementById('sliderImage');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const imageCounter = document.getElementById('imageCounter');
+const msgText = document.getElementById('msgText');
 
 // Текущий индекс изображения (начинаем с 0)
 let currentIndex = 0;
@@ -18,6 +27,7 @@ let currentIndex = 0;
 // Функция обновления изображения
 function updateImage(index) {
     sliderImage.src = images[index];
+    msgText.textContent = messages[index];
     imageCounter.textContent = `${index + 1} / ${images.length}`;
 }
 
